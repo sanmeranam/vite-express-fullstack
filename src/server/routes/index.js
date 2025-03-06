@@ -1,4 +1,4 @@
-const { sample } = require("../controller/sample");
+const { sample, sampleJson } = require("../controller/sample");
 
 const routes = [
   {
@@ -7,6 +7,12 @@ const routes = [
      middlewares: [],
      controller: sample,
    },
+  {
+    method: 'get',
+    route: '/hello',
+    middlewares: [],
+    controller: sampleJson,
+  },
 ];
 
 module.exports = routes;
